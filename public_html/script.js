@@ -7,25 +7,43 @@
 
 $("document").ready(function(){
     $(".haha").css("background-color", "yellow");
-    $("p").css("background-color", "gray");
+    $("p:last").css("background-color", "gray");
+    
     $('#oneButton').bind('click', alertButtonClick);
-    $('#textBox1').bind('blur', onBlurEvent)
-            .bind('onmousedown', onMDownEvent)
-            .bind('onmouseup', onMUpEvent);
+    $('#logo').bind('mouseover', mouseOverme).bind('mouseout', mouseOutme);
+    
+    $('#add').bind('click', addText);
+    $('#remove').bind('click', removeText);
+    $('#replace').bind('click', replaceText);
+    
+    $('#customAnimate').bind('click', customAnimate);
 });
 
 function alertButtonClick(){
        alert("There was a button clicked");   
 }
 
-function onBlurEvent(){
-    $("#second").html("You left the box");
+function mouseOverme(){
+    $("#second").html("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    $("#second").css("font-size", "27px");
+    $("#second").css("background-color", "red");
 }
 
-function onMDownEvent(){
-    $("#second").html("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+function mouseOutme() {
+    $("#second").html("zzzzzzzzzzzzzzzzz");
+    $("#second").css("font-size", "13px");
 }
 
-function onMUpEvent(){
-    $("#second").html("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+function addText() {
+    $("#randPara").append('<p>hahahahahahahahahahahahhahaha</p>')
+}
+function removeText() {
+    $("#randPara p:last").remove();
+}
+function replaceText() {
+    $("#useless").html('<h6> I am Replaced...................</h6>');
+}
+
+function customAnimate() {
+    $("#logo").animate({opacity: 0.25, height: '150px'}, 2000, 'swing');
 }
