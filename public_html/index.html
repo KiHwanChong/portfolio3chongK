@@ -9,8 +9,25 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            h4 {
+                background-color:DarkSlategray;
+                color:white;
+                padding:10px;
+            }
+        </style>
+        <script type="text/javascript">
+            $("document").ready(function() {
+
+                $('#superHumans > p').hide();
+                $('#superHumans h4').click(function() {
+                    $(this).siblings('p:visible').slideUp('2000');
+                    $(this).next().animated({'height': 'toggle'}, '2000', 'easeInOutExpo');
+                });
+            });
+        </script>
     </head>
     <body>
         <div class="haha">
@@ -26,6 +43,17 @@ and open the template in the editor.
         <button type="button" id="remove">Remove text</button>
         <button type="button" id="replace">Change text</button>
         <button type="button" id="customAnimate">Custom Animation</button>
+        <button type="button" id="removeAnimation">Remove Animation</button>
+        <div id="superHumans">
+            <h4>AAAAA</h4>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <h4>BBBB</h4>
+            <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+            <h4>AAAAA</h4>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <h4>AAAAA</h4>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>           
+        </div>
         <div>
             <p id="randPara"></p>
         </div>

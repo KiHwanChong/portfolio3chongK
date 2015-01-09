@@ -5,25 +5,29 @@
  */
 
 
-$("document").ready(function(){
+$("document").ready(function() {
     $(".haha").css("background-color", "yellow");
     $("p:last").css("background-color", "gray");
-    
+
     $('#oneButton').bind('click', alertButtonClick);
     $('#logo').bind('mouseover', mouseOverme).bind('mouseout', mouseOutme);
-    
+
     $('#add').bind('click', addText);
     $('#remove').bind('click', removeText);
     $('#replace').bind('click', replaceText);
-    
+
     $('#customAnimate').bind('click', customAnimate);
+    $('#removeAnimation').bind('click', removeAnimation);
+    
+    
+    
 });
 
-function alertButtonClick(){
-       alert("There was a button clicked");   
+function alertButtonClick() {
+    alert("There was a button clicked");
 }
 
-function mouseOverme(){
+function mouseOverme() {
     $("#second").html("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     $("#second").css("font-size", "27px");
     $("#second").css("background-color", "red");
@@ -46,4 +50,8 @@ function replaceText() {
 
 function customAnimate() {
     $("#logo").animate({opacity: 0.25, height: '150px'}, 2000, 'swing');
+}
+
+function removeAnimation() {
+    $("#logo").remove();
 }
