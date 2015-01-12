@@ -18,9 +18,13 @@ $("document").ready(function() {
 
     $('#customAnimate').bind('click', customAnimate);
     $('#removeAnimation').bind('click', removeAnimation);
-    
-    
-    
+
+    $('#superHumans > p').hide();
+    $('#superHumans h4').click(function() {
+        $(this).siblings('p:visible').slideUp('2000');
+        $(this).next().animate({'height': 'toggle'}, '2000', 'easeInOutExpo');
+    });
+
 });
 
 function alertButtonClick() {
