@@ -24,6 +24,12 @@ $("document").ready(function() {
         $(this).siblings('p:visible').slideUp('2000');
         $(this).next().animate({'height': 'toggle'}, '2000', 'easeInOutExpo');
     });
+    
+    $("#tabs").tabs();
+    $("#tabs").css({'width':'500'});
+    $("#tabs").draggable();
+    $("#tabs").resizable();
+    $("#sortMe").sortable();
 
 });
 
