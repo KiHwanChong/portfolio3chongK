@@ -24,12 +24,35 @@ $("document").ready(function() {
         $(this).siblings('p:visible').slideUp('2000');
         $(this).next().animate({'height': 'toggle'}, '2000', 'easeInOutExpo');
     });
-    
+
     $("#tabs").tabs();
-    $("#tabs").css({'width':'500'});
+    $("#tabs").css({'width': '1000'});
     $("#tabs").draggable();
     $("#tabs").resizable();
     $("#sortMe").sortable();
+
+    $('#animateList').hover(function() { //mouse in
+        $(this).animate({paddingLeft: '550px'}, 400);
+    }, function() { //mouse out
+        $(this).animate({paddingLeft: 0}, 400);
+    });
+    
+    $('a[rel=example_group]').fancybox({
+
+'transitionIn'	: 'elastic', 
+
+'transitionOut'	: 'elastic',
+
+'titlePosition' : 'over',
+
+'titleFormat'	: function(title, currentArray, currentIndex, currentOpts) {
+
+return '<span id=”"fancybox-title-over">Image' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+
+}
+
+});
+    
 
 });
 
@@ -63,5 +86,5 @@ function customAnimate() {
 }
 
 function removeAnimation() {
-    $("#logo").remove();
+    $("#logo").hide('slide', {}, 2500);
 }
