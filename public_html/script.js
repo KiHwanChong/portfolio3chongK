@@ -36,23 +36,18 @@ $("document").ready(function() {
     }, function() { //mouse out
         $(this).animate({paddingLeft: 0}, 400);
     });
-    
-    $('a[rel=example_group]').fancybox({
 
-'transitionIn'	: 'elastic', 
+//    $("a[rel=example_group]").fancybox({
+//        'transitionIn': 'elastic',
+//        'transitionOut': 'elastic',
+//        'titlePosition': 'over',
+//        'titleFormat': function(title, currentArray, currentIndex, currentOpts) {
+//            return '<span id="fancybox-title-over">Image' + (currentIndex + 1) + 
+//            ' / ' + currentArray.length + (title.length ?  '&nbsp;' + title : '') + '</span>';
+//        }
 
-'transitionOut'	: 'elastic',
+   // });
 
-'titlePosition' : 'over',
-
-'titleFormat'	: function(title, currentArray, currentIndex, currentOpts) {
-
-return '<span id=”"fancybox-title-over">Image' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
-
-}
-
-});
-    
 
 });
 
