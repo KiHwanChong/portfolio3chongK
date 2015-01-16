@@ -45,8 +45,7 @@ $("document").ready(function() {
 //            return '<span id="fancybox-title-over">Image' + (currentIndex + 1) + 
 //            ' / ' + currentArray.length + (title.length ?  '&nbsp;' + title : '') + '</span>';
 //        }
-
-   // });
+//});
 
 
 });
