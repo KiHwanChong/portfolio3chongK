@@ -6,31 +6,37 @@
 
 
 $("document").ready(function() {
+    //using jquery to change background color of sister paragragh
     $(".haha").css("background-color", "yellow");
-    $("p:last").css("background-color", "gray");
+    $(".haha p:last").css("background-color", "gray");
 
+    //mouse over and mouse click effect
     $('#oneButton').bind('click', alertButtonClick);
     $('#logo').bind('mouseover', mouseOverme).bind('mouseout', mouseOutme);
 
+    //you can add, remove, and replace text
     $('#add').bind('click', addText);
     $('#remove').bind('click', removeText);
     $('#replace').bind('click', replaceText);
 
+    //change animation and remove it
     $('#customAnimate').bind('click', customAnimate);
     $('#removeAnimation').bind('click', removeAnimation);
 
+    //accordion
     $('#superHumans > p').hide();
     $('#superHumans h4').click(function() {
         $(this).siblings('p:visible').slideUp('2000');
         $(this).next().animate({'height': 'toggle'}, '2000', 'easeInOutExpo');
     });
-
+    //resizable, draggable, sortable tabs
     $("#tabs").tabs();
     $("#tabs").css({'width': '1000'});
     $("#tabs").draggable();
     $("#tabs").resizable();
     $("#sortMe").sortable();
 
+    //nudging out animation
     $('#animateList').hover(function() { //mouse in
         $(this).animate({paddingLeft: '550px'}, 400);
     }, function() { //mouse out

@@ -8,6 +8,7 @@ and open the template in the editor.
     Author     : Student
 */
 
+//background color for h4
 h4 {
     background-color:DarkSlategray;
     color:white;
@@ -56,10 +57,12 @@ h4 {
     transform: rotateY(180deg);
 }
 
+//custom cursor
 body {
     cursor: url('../cursor-3-32.png'), default;
 }
 
+//background video filled the whole screen
 video#bgvid {
 position: fixed; right: 0; bottom: 0;
 min-width: 100%; min-height: 100%;
