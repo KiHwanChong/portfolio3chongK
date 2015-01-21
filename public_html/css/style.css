@@ -1,14 +1,5 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Jan 12, 2015, 11:54:35 AM
-    Author     : Student
-*/
 
-//background color for h4
+/*background color for h4*/
 h4 {
     background-color:DarkSlategray;
     color:white;
@@ -57,12 +48,12 @@ h4 {
     transform: rotateY(180deg);
 }
 
-//custom cursor
+/*custom cursor*/
 body {
     cursor: url('../cursor-3-32.png'), default;
 }
 
-//background video filled the whole screen
+/*background video filled the whole screen*/
 video#bgvid {
 position: fixed; right: 0; bottom: 0;
 min-width: 100%; min-height: 100%;

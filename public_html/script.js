@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-
 $("document").ready(function() {
+    
     //using jquery to change background color of sister paragragh
     $(".haha").css("background-color", "yellow");
     $(".haha p:last").css("background-color", "gray");
@@ -42,6 +42,9 @@ $("document").ready(function() {
     }, function() { //mouse out
         $(this).animate({paddingLeft: 0}, 400);
     });
+    
+    //fade in and out effect on button
+    $('#navBar').bind('mouseover', fadeIn).bind('mouseout', fadeOut);
 
 //    $("a[rel=example_group]").fancybox({
 //        'transitionIn': 'elastic',
@@ -87,4 +90,15 @@ function customAnimate() {
 
 function removeAnimation() {
     $("#logo").hide('slide', {}, 2500);
+}
+
+//fade in and out by using opacity
+function fadeIn() {
+    $("#navBar").css("opacity", 0.4);
+    $("#navBar").css("background-color", "green");
+}
+
+function fadeOut() {
+    $("#navBar").css("opacity", 1);   
+    $("#navBar").css("background-color", "white");
 }
