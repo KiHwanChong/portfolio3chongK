@@ -16,15 +16,16 @@ and open the template in the editor.
     </head>
     <body>
         <div class="haha">
-            <p>Hi</p>
+            <p id="useless">Hi</p>
             <p><a href="http://localhost:8383/chongk-portfolio2/index.html">link to portfolio 2</a></p>
         </div>
         <div>
+            <!--this is my own logo that I created-->
             <img id="logo" src="images/myLogo.png">
             <!-- paragraph that can be changed -->
             <p id="second">Waiting For Event</p>
         </div>
-        <button type="button" id="navBar">Fade in out</button>
+        <button type="button" id="navBar">Fade in & out</button>
         <button type="button" id="oneButton">Alert on Click</button>
         <button type="button" id="add">Add text</button>
         <button type="button" id="remove">Remove text</button>
@@ -34,7 +35,9 @@ and open the template in the editor.
         <div>
             <!-- random paragraph that can be added or removed-->
             <p id="randPara"></p>
+
         </div>
+        <!--accordion-->
         <div id="superHumans">
             <h4>AAAAA</h4>
             <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
@@ -45,13 +48,14 @@ and open the template in the editor.
             <h4>AAAAA</h4>
             <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>           
         </div>
+
+        <!--tabs-->
         <div id="tabs">
             <ul id="sortMe">
                 <li><a href="#fragment-1"><span>AAAAA</span></a></li>
                 <li><a href="#fragment-2"><span>BBBBB</span></a></li>
                 <li><a href="#fragment-3"><span>CCCCC</span></a></li>
             </ul>
-
             <div id="fragment-1">
                 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             </div>
@@ -62,8 +66,9 @@ and open the template in the editor.
                 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
             </div>
         </div>
+
         <!--a flippable textbox -->
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flip-container">
             <div class="flipper">
                 <div class="front">
                     RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
@@ -73,10 +78,12 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
+        
+        <!--nudging out-->
         <div>
-            <!--nudging out-->
             <img id="animateList" src="images/eating.gif">
         </div>
+        
         <!--video source for background-->
         <video autoplay loop id="bgvid">
             <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>

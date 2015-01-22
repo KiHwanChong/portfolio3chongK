@@ -5,7 +5,7 @@
  */
 
 $("document").ready(function() {
-    
+
     //using jquery to change background color of sister paragragh
     $(".haha").css("background-color", "yellow");
     $(".haha p:last").css("background-color", "gray");
@@ -42,9 +42,15 @@ $("document").ready(function() {
     }, function() { //mouse out
         $(this).animate({paddingLeft: 0}, 400);
     });
-    
+
     //fade in and out effect on button
     $('#navBar').bind('mouseover', fadeIn).bind('mouseout', fadeOut);
+    $('#oneButton').bind('mouseover', fadeIn2).bind('mouseout', fadeOut2);
+    $('#add').bind('mouseover', fadeIn3).bind('mouseout', fadeOut3);
+    $('#remove').bind('mouseover', fadeIn4).bind('mouseout', fadeOut4);
+    $('#replace').bind('mouseover', fadeIn5).bind('mouseout', fadeOut5);
+    $('#customAnimate').bind('mouseover', fadeIn6).bind('mouseout', fadeOut6);
+    $('#removeAnimation').bind('mouseover', fadeIn7).bind('mouseout', fadeOut7);
 
 //    $("a[rel=example_group]").fancybox({
 //        'transitionIn': 'elastic',
@@ -63,17 +69,20 @@ function alertButtonClick() {
     alert("There was a button clicked");
 }
 
+//mouse hover effect
 function mouseOverme() {
     $("#second").html("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     $("#second").css("font-size", "27px");
     $("#second").css("background-color", "red");
 }
 
+//mouse out effect
 function mouseOutme() {
     $("#second").html("zzzzzzzzzzzzzzzzz");
     $("#second").css("font-size", "13px");
 }
 
+//add, remove, and replace text
 function addText() {
     $("#randPara").append('<p>hahahahahahahahahahahahhahaha</p>')
 }
@@ -82,6 +91,7 @@ function removeText() {
 }
 function replaceText() {
     $("#useless").html('<h6> I am Replaced...................</h6>');
+    $("#useless").css("font-size", "66px");
 }
 
 function customAnimate() {
@@ -99,6 +109,64 @@ function fadeIn() {
 }
 
 function fadeOut() {
-    $("#navBar").css("opacity", 1);   
+    $("#navBar").css("opacity", 1);
     $("#navBar").css("background-color", "white");
+}
+
+function fadeIn2() {
+    $("#oneButton").css("opacity", 0.4);
+    $("#oneButton").css("background-color", "red");
+}
+
+function fadeOut2() {
+    $("#oneButton").css("opacity", 1);
+    $("#oneButton").css("background-color", "white");
+}
+
+function fadeIn3() {
+    $("#add").css("opacity", 0.4);
+    $("#add").css("background-color", "blue");
+}
+
+function fadeOut3() {
+    $("#add").css("opacity", 1);
+    $("#add").css("background-color", "white");
+}
+
+function fadeIn4() {
+    $("#remove").css("opacity", 0.4);
+    $("#remove").css("background-color", "pink");
+}
+
+function fadeOut4() {
+    $("#remove").css("opacity", 1);
+    $("#remove").css("background-color", "white");
+}
+
+function fadeIn5() {
+    $("#replace").css("opacity", 0.4);
+    $("#replace").css("background-color", "orange");
+}
+function fadeOut5() {
+    $("#replace").css("opacity", 1);
+    $("#replace").css("background-color", "white");
+    
+}
+
+function fadeIn6() {
+    $("#customAnimate").css("opacity", 0.4);
+    $("#customAnimate").css("background-color", "purple");
+}
+function fadeOut6() {
+    $("#customAnimate").css("opacity", 1);
+    $("#customAnimate").css("background-color", "white");
+}
+
+function fadeIn7() {
+    $("#removeAnimation").css("opacity", 0.4);
+    $("#removeAnimation").css("background-color", "yellow");
+}
+function fadeOut7() {
+    $("#removeAnimation").css("opacity", 1);
+    $("#removeAnimation").css("background-color", "white");
 }
